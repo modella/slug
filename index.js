@@ -18,7 +18,7 @@ module.exports = function(attr) {
   return function(model) {
     model.attr('slug', { type : 'string' });
     model.on('saving', function(obj) {
-      obj.slug(slug(obj[attr]()));
+      if(obj.isNew()) obj.slug(slug(obj[attr]()));
     });
   };
 };
