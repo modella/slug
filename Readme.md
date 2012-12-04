@@ -7,9 +7,16 @@
 
     $ component install matthewmueller/model-slug
 
-## API
+## Example
 
+```js
+var slug = require('model-slug');
 
+var blog = model('blog')
+  .attr('title')
+  .attr('content')
+  .use(slug('title'))
+```
 
 ## License
 
