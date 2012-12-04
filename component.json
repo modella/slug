@@ -1,0 +1,15 @@
+{
+  "name": "model-slug",
+  "repo": "matthewmueller/model-slug",
+  "description": "create slugs for models",
+  "version": "0.0.1",
+  "keywords": [],
+  "dependencies": {
+    "yields/slug" : "*"
+  },
+  "development": {},
+  "license": "MIT",
+  "scripts": [
+    "index.js"
+  ]
+}
