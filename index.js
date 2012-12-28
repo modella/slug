@@ -2,7 +2,7 @@
  * Module dependencies
  */
 
-var slug = require('slug');
+var slug = require('./deps/slug');
 
 /**
  * Export `slug`
