@@ -17,6 +17,11 @@ var slug = require('./deps/slug');
 module.exports = function(attr) {
   return function(model) {
     model.attr('slug', { type : 'string' });
+
+    // bind given `attr` changes to slug changes
+    model.on('change title', function(obj, title) { obj.slug(slug(title)); });
+
+    // create a slug if it's not set manually and if the model is new
     model.on('saving', function(obj) {
       if(obj.isNew() && !obj.slug()) obj.slug(slug(obj[attr]()));
     });
