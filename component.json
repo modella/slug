@@ -2,7 +2,7 @@
   "name": "model-slug",
   "repo": "matthewmueller/model-slug",
   "description": "create slugs for models",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "keywords": [],
   "development": {},
   "license": "MIT",
