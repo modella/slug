@@ -1,8 +1,8 @@
 {
-  "name": "model-slug",
-  "repo": "matthewmueller/model-slug",
+  "name": "modella-slug",
+  "repo": "modella/slug",
   "description": "create slugs for models",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "keywords": [],
   "development": {},
   "license": "MIT",
