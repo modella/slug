@@ -1,16 +1,21 @@
-
 # model-slug
 
   create slugs for models
 
 ## Installation
 
-    $ component install matthewmueller/model-slug
+In the browser (with component):
+
+    component install modella/slug
+
+On the server (with node.js):
+
+    npm install modella-slug
 
 ## Example
 
 ```js
-var slug = require('model-slug');
+var slug = require('slug');
 
 var blog = model('blog')
   .attr('title')

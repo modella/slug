@@ -19,7 +19,7 @@ module.exports = function(attr) {
     model.attr('slug', { type : 'string' });
 
     // bind given `attr` changes to slug changes
-    model.on('change title', function(obj, title) { obj.slug(slug(title)); });
+    model.on('change ' + attr, function(obj, attr) { obj.slug(slug(attr)); });
 
     // create a slug if it's not set manually and if the model is new
     model.on('saving', function(obj) {
