@@ -3,6 +3,8 @@
 ==================
 
  * Switched to new modella change events
+ * Added better punctuation filtering 
+ * Renamed a horribly named variable
 
 0.0.4 / 2013-03-01
 ==================
