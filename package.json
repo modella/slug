@@ -1,6 +1,6 @@
 {
   "name": "modella-slug",
-  "version": "0.0.4",
+  "version": "0.1.0",
   "description": "create slugs for models",
   "main": "index.js",
   "scripts": {
