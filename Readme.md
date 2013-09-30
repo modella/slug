@@ -29,7 +29,7 @@ var Blog = model('blog')
 
 ```
 
-## Complex Example
+## Multi-Attribute Example
 
 ```js
 var slug = require('slug');
@@ -42,8 +42,41 @@ var Blog = model('blog')
 
   var b = new Blog();
   b.title('Some blog post');
-  b.author('Ryan S.');
+  b.slug();
+  // => 'some-blog-post-by-'
 
+  b.author('Ryan S.');
+  b.slug();
+  // => 'some-blog-post-by-ryan-s'
+
+```
+
+## Function Based Example
+
+```js
+var slug = require('slug');
+
+
+var Blog = model('blog')
+  .attr('title')
+  .attr('author')
+  .attr('content')
+
+var getBlogSlug = function(blog) {
+  var result = blog.title();
+  if(blog.author()) {
+    result += ' by ' blog.author();
+  }
+  return result;
+};
+
+  var b = new Blog();
+  b.title('Some blog post');
+
+  b.slug();
+  // => 'some-blog-post'
+
+  b.author('Ryan S.');
   b.slug();
   // => 'some-blog-post-by-ryan-s'
 

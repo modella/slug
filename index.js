@@ -27,13 +27,19 @@ module.exports = function(attrs, format) {
   }
 
   var makeSlugString = function(obj) {
-    var string = format;
-    var toSub = format.match(/(:\w+)/g);
-    toSub.forEach(function(sub) {
-      var attr = sub.slice(1),
-          val = obj[attr]() || '';
-      string = string.replace(sub, val);
-    });
+    var string;
+
+    if(typeof format == 'function') {
+      string = format(obj);
+    } else {
+      string = format;
+      var toSub = format.match(/(:\w+)/g);
+      toSub.forEach(function(sub) {
+        var attr = sub.slice(1),
+            val = obj[attr]() || '';
+        string = string.replace(sub, val);
+      });
+    }
     obj.slug(slug(string));
   };
 
