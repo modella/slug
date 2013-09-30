@@ -16,6 +16,7 @@
  */
 
 module.exports = function (str, repl) {
+  if(!str) return undefined;
   return str.toLowerCase()
     .replace(/:|\.|,|`|'|"/g, '')
     .replace(/[^a-z0-9]/g, ' ')
