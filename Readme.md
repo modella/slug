@@ -17,7 +17,7 @@ On the server (with node.js):
 ```js
 var slug = require('slug');
 
-var Blog = model('blog')
+var Blog = modella('blog')
   .attr('title')
   .attr('content')
   .use(slug('title'))
@@ -34,7 +34,7 @@ var Blog = model('blog')
 ```js
 var slug = require('slug');
 
-var Blog = model('blog')
+var Blog = modella('blog')
   .attr('title')
   .attr('author')
   .attr('content')
@@ -57,7 +57,7 @@ var Blog = model('blog')
 var slug = require('slug');
 
 
-var Blog = model('blog')
+var Blog = modella('blog')
   .attr('title')
   .attr('author')
   .attr('content')
@@ -65,10 +65,12 @@ var Blog = model('blog')
 var getBlogSlug = function(blog) {
   var result = blog.title();
   if(blog.author()) {
-    result += ' by ' blog.author();
+    result += ' by ' + blog.author();
   }
   return result;
 };
+
+  Blog.use(slug(['author', 'title'], getBlogSlug));
 
   var b = new Blog();
   b.title('Some blog post');
