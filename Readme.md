@@ -38,7 +38,7 @@ var Blog = modella('blog')
   .attr('title')
   .attr('author')
   .attr('content')
-  .use(slug(['title', 'author'], ':title-by-:author))
+  .use(slug(['title', 'author'], ':title-by-:author'));
 
   var b = new Blog();
   b.title('Some blog post');
@@ -60,7 +60,7 @@ var slug = require('slug');
 var Blog = modella('blog')
   .attr('title')
   .attr('author')
-  .attr('content')
+  .attr('content');
 
 var getBlogSlug = function(blog) {
   var result = blog.title();
