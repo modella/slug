@@ -52,7 +52,7 @@ module.exports = function(attrs, format) {
 
       // create a slug if it's not set manually and if the model is new
       model.on('saving', function(obj) {
-        if(obj.isNew() && !obj.slug()) makeSlugString();
+        if(obj.isNew() && !obj.slug()) makeSlugString(obj);
       });
     });
 
