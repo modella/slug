@@ -49,11 +49,12 @@ module.exports = function(attrs, format) {
     // bind given `attr` changes to slug changes
     attrs.forEach(function(attr) {
       model.on('change:' + attr, makeSlugString);
+
+      // create a slug if it's not set manually and if the model is new
+      model.on('saving', function(obj) {
+        if(obj.isNew() && !obj.slug()) makeSlugString();
+      });
     });
 
-    // create a slug if it's not set manually and if the model is new
-    model.on('saving', function(obj) {
-      if(obj.isNew() && !obj.slug()) obj.slug(slug(obj[attr]()));
-    });
   };
 };
