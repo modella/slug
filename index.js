@@ -51,7 +51,7 @@ module.exports = function(attrs, format) {
       model.on('change:' + attr, makeSlugString);
 
       // create a slug if it's not set manually and if the model is new
-      model.on('saving', function(obj) {
+      model.on('initialize', function(obj) {
         if(obj.isNew() && !obj.slug()) makeSlugString(obj);
       });
     });
