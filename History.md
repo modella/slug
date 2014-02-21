@@ -1,4 +1,9 @@
 
+0.3.1 / 2014-02-21 
+==================
+
+ * fix duplicate initialize listeners
+
 0.3.0 / 2013-11-12 
 ==================
  * Modella 0.2.0 Support
