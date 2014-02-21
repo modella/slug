@@ -16,5 +16,10 @@
   ],
   "author": "matthew mueller",
   "license": "MIT",
-  "readmeFilename": "Readme.md"
+  "readmeFilename": "Readme.md",
+  "devDependencies": {
+    "expect.js": "~0.3.1",
+    "mocha": "~1.17.1",
+    "modella": "~0.2.7"
+  }
 }
