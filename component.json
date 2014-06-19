@@ -2,7 +2,7 @@
   "name": "modella-slug",
   "repo": "modella/slug",
   "description": "create slugs for models",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "main": "index.js",
   "keywords": [],
   "development": {},
