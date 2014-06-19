@@ -3,6 +3,7 @@
   "repo": "modella/slug",
   "description": "create slugs for models",
   "version": "0.3.1",
+  "main": "index.js",
   "keywords": [],
   "development": {},
   "license": "MIT",
